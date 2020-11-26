@@ -8,15 +8,15 @@ import java.util.Scanner;
     int startingAmount;
     int projectionYear;
 
-/////input screen
+/////input screen 
     System.out.println("Please enter in the following information for a conservation area: ");
     System.out.println("------------------------");
     System.out.print("Type of animal: " );
     typeOfAnimal=input.nextLine();
     System.out.print("Amount of animals: ");
-    startingAmount=input.nextInt();
+    startingAmount=Integer.parseInt(input.nextLine());
     System.out.print("Projection Year: ");
-    projectionYear=input.nextInt();
+    projectionYear=Integer.parseInt(input.nextLine());
     System.out.println("------------------------");
 
 ////process section 
