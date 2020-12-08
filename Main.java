@@ -4,27 +4,18 @@ import java.util.Scanner;
   public static void main(String[] args) {
 
     Scanner input=new Scanner(System.in);
-    String typeOfAnimal;
-    int startingAmount;
-    int projectionYear;
-
-/////input screen 
-    System.out.println("Please enter in the following information for a conservation area: ");
-    System.out.println("------------------------");
+    try{
     System.out.print("Type of animal: " );
-    typeOfAnimal=input.nextLine();
+    String typeOfAnimal=input.nextLine();
     System.out.print("Amount of animals: ");
-    startingAmount=Integer.parseInt(input.nextLine());
+    int startingAmount=input.nextInt();
     System.out.print("Projection Year: ");
-    projectionYear=Integer.parseInt(input.nextLine());
-    System.out.println("------------------------");
-
-////process section 
-int x=projectionYear;
-int y=startingAmount;
-int projectedPopulation= (x-2019)*y;
-
-/////output screen
+    int projectionYear=input.nextInt();
+    ////process section 
+    int x=projectionYear;
+    int y=startingAmount;
+    int projectedPopulation= (x-2019)*y;
+    /////output screen
     System.out.println("Here'a conservation area: ");
     System.out.println("------------------------");
     System.out.println("Type of aniaml: " + typeOfAnimal);
@@ -33,6 +24,11 @@ int projectedPopulation= (x-2019)*y;
     System.out.println("Projection year: " + projectionYear);
     System.out.println("Projected population: " + projectedPopulation);
     System.out.println("------------------------");
+    }
+    catch(Exception e){
+      System.out.println("Please enter the right numbers");
+    }
+
 
   }
 }
